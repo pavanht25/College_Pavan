@@ -1,0 +1,13 @@
+<style type="text/css">
+body
+{
+background-image:url('assets/blue.png');
+}
+</style>
+<center><H1>WELCOME TO ADD SUBJECTS</H1></br></br></br>
+
+<%= form_for :sav,:url=>{:action=>'save'} do |s|%>
+SUBJECT_NAME:<%=s.text_field :subject%></br></br>
+<%=s.submit("SAVE")%>
+<%end%>
+</center>

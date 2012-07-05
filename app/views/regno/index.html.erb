@@ -1,0 +1,13 @@
+<style type="text/css">
+body
+{
+background-image:url('assets/blue.png');
+}
+</style>
+<center><H1>WELCOME TO STUDENT REGNO</H1></br></br></br>
+
+<%= form_for :sa,:url=>{:action=>'save',:id=>@fetch.id} do |s|%>
+STUDENT_REGNO:<%=s.text_field :regno%></br></br>
+<%=s.submit("SAVE")%>
+<%end%>
+</center>

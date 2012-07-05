@@ -1,0 +1,16 @@
+
+
+<center><H1>WELCOME TO ADD STUDENT DETAILS</H1></br></br></br>
+
+<%= form_for :sa,:url=>{:action=>'save',:id=>@fetch.id} do |s|%>
+STUD_NAME:<%=s.text_field :stud_name%></br></br>
+PERCENTAGE:<%=s.text_field :stud_percentage%></br></br>
+
+<%= s.submit("SAVE")%>
+<%#=@post.inspect%>
+<% @post.each do|tag|%>
+ <%=tag.subject%>
+    <%=check_box_tag " ",tag.id,@index.subjects.include?(tag)%>
+    <%end%>
+<br/>
+<%end%>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  stud_name: MyString
+  stud_percentage: MyString
+
+two:
+  stud_name: MyString
+  stud_percentage: MyString

@@ -1,0 +1,30 @@
+
+<center><h1>WELCOME TO SHOW MY TABLE</h1>
+<style type="text/css">
+body {
+	color:red;
+	background-color:#b0c4de;
+}
+h1 {color:#00ff00;}
+</style>
+</br></br></br></br></br></br>
+
+<table border=5>
+	<tr>
+		<th>DEPT_NAME</th>
+		<th>HOD_NAME</th></tr>
+<%@show.each do |s|%>
+<tr><td><%=s.dept_name%></td>
+<td><%=s.hod_name%></td>
+<td><%=link_to'view',{:action=>'view',:id=>s.id}%></td>
+<td><%=link_to'Edit',{:action=>'edit',:id=>s.id}%></td>
+<td><%=link_to'Delete',{:action=>'delete',:id=>s.id}%></td>
+<td><%=link_to'Add student',{:controller=>'student',:action=>'index',:id=>s.id}%></td>
+<td><%=link_to'showstudents',:controller=>'student',:action=>'display',:id=>s.id%></td>
+</tr>
+<%end%>
+</table></br></br>
+<%=link_to'back',{:action=>'index'}%>
+</center>
+
+

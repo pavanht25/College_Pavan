@@ -1,0 +1,2 @@
+module RegnoHelper
+end

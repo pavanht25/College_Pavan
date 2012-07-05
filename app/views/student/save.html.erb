@@ -1,0 +1,4 @@
+<% @post.each do|tag|%>
+ <%=tag.subject%>
+ <%=check_box_tag " ",tag.id,@index.subjects.include?(tag)%>
+    <%end%>

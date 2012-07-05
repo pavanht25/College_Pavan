@@ -1,0 +1,15 @@
+<style type="text/css">
+body
+{
+background-image:url('assets/blue.png');
+}
+</style>
+<center><H1>WELCOME TO EDIT YOUR DATA</H1></br></br></br>
+
+<%= form_for @edit,:url=>{:action=>'update',:id=>@edit.id} do |s|%>
+STUD_NAME:<%=s.text_field :stud_name%></br></br>
+STUD_PERCENTAGE:<%=s.text_field :stud_percentage%></br></br>
+<%=s.submit("SAVE")%>
+<%end%></br></br>
+<%=link_to'back',{:action=>'showall'}%>
+</center>

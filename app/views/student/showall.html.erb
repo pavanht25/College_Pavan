@@ -1,0 +1,27 @@
+<center><h1>WELCOME TO SHOW MY TABLE</h1>
+<style type="text/css">
+body {
+	color:red;
+	background-color:#b0c4de;
+}
+h1 {color:#00ff00;}
+</style>
+</br></br></br></br></br></br>
+
+<table border=5>
+	<tr>
+		<th>STUD_NAME</th>
+		<th>STUD_PERCENTAGE</th></tr>
+<%@show.each do |s|%>
+<tr><td><%=s.stud_name%></td>
+<td><%=s.stud_percentage%></td>
+<td><%=link_to'View',{:action=>'view',:id=>s.id}%></td>
+<td><%=link_to'Edit',{:action=>'edit',:id=>s.id}%></td>
+<td><%=link_to'delete',{:action=>'delete',:id=>s.id}%></td>
+<td><%=link_to'Enter stud regno',{:controller=>'regno',:action=>'index',:id=>s.id}%>
+</td>
+</tr>
+<%end%>
+</table></br></br>
+<%=link_to'back',{:controller=>'dept',:action=>'showall'}%>
+</center>

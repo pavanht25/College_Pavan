@@ -1,0 +1,23 @@
+
+<center><h1>WELCOME TO SHOW MY TABLE</h1>
+<style type="text/css">
+body {
+	color:red;
+	background-color:#b0c4de;
+}
+h1 {color:#00ff00;}
+</style>
+</br></br></br></br></br></br>
+
+<table border=5>
+	<tr>
+		<th>SUBJECT_NAME</th>
+		</tr>
+<%@show.each do |s|%>
+<tr><td><%=s.subject%></td>
+
+</tr>
+<%end%>
+</table></br></br>
+<%=link_to'back',{:action=>'index'}%>
+</center>
